@@ -21,7 +21,7 @@ containers = page_soup.findAll("div", {"class":"s-item-container"})
 
 
 # Creates New File:
-fileName = "H:\WEBSCRAPER\Result\Products.csv"
+fileName = "Products_MacBook.csv"
 headers = "Product Name, Current Price, Original Price\n"
 
 f = open(fileName, "w")
