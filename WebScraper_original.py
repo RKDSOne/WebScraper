@@ -1,0 +1,55 @@
+from urllib.request import urlopen as uReq
+from bs4 import BeautifulSoup as soup
+
+
+my_url = "https://www.amazon.in/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=a+song+of+ice+and+fire"
+
+
+# opening up connection, grabbing the page
+uClient = uReq(my_url)
+page_html = uClient.read()
+uClient.close()
+
+
+# html parsing
+page_soup = soup(page_html, "html.parser")
+
+
+# grabs each product
+containers = page_soup.findAll("div", {"class":"s-item-container"})
+
+
+# Creates New File:
+fileName = "H:\WEBSCRAPER\Result\Products.csv"
+headers = "Product Name, Current Price, Original Price\n"
+
+f = open(fileName, "w")
+f.write(headers)
+
+
+errorMsg = "Error! Not Found"
+# obtains the data
+for contain in containers:
+	try:
+		title = contain.h2.text
+	except IndexError:
+		title =  errorMsg
+	try:
+		priceCurrent = contain.findAll("span", {"class":"a-size-base a-color-price s-price a-text-bold"})
+		CurrentSP = priceCurrent[0].text.strip()
+	except IndexError:
+		CurrentSP =  errorMsg
+	try:
+		priceSuggested = contain.findAll("span", {"class":"a-size-small a-color-secondary a-text-strike"})
+		SuggestedSP = priceSuggested[0].text.strip()
+	except IndexError:
+		SuggestedSP =  errorMsg
+
+
+	print("title: " + title)
+	print("CurrentSP: " + CurrentSP)
+	print("SuggestedSP: " + SuggestedSP)
+
+	f.write(title.replace(",", "|") + "," + CurrentSP.replace(",", "") + "," + SuggestedSP.replace(",", "") + "\n")
+
+f.close()

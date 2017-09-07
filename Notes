@@ -1,0 +1,43 @@
+Name of book: 
+	 <h2 class="a-size-medium s-inline s-access-title a-text-normal" data-attribute="A Game of Thrones (A Song of Ice and Fire)" data-max-rows="0">A Game of Thrones (A Song of Ice and Fire)</h2>
+
+Current Selling Price & Undeiscounted Price of Book:
+	 <div class="a-row a-spacing-none">
+	 	<a class="a-link-normal a-text-normal" href="https://www.amazon.in/Game-Thrones-Song-Ice-Fire/dp/0007428545">
+	 		<span class="a-size-small a-color-secondary">
+	 		</span>
+
+	 		<span class="a-size-base a-color-price s-price a-text-bold">
+	 			<span class="currencyINR">  
+	 			</span>
+	 		325
+	 		</span>
+
+	 	</a>
+	 	<span class="a-letter-space">
+	 	</span>
+
+	 	<span aria-label='Suggested Retail Price: &lt;span class="currencyINR"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;550' class="a-size-small a-color-secondary a-text-strike">
+	 		<span class="currencyINR"> 
+	 		</span>
+	 	550
+	 	</span>
+
+     </div>
+
+Rating Of The Product:
+	<div class="a-row a-spacing-mini">
+		<span name="0007428545">
+			<span class="a-declarative" data-a-popover='{"max-width":"700","closeButton":"false","position":"triggerBottom","url":"/review/widgets/average-customer-review/popover/ref=acr_search__popover?ie=UTF8&amp;asin=0007428545&amp;contextId=search&amp;ref=acr_search__popover"}' data-action="a-popover">
+				<a class="a-popover-trigger a-declarative" href="javascript:void(0)">
+					<i class="a-icon a-icon-star a-star-4-5">
+						<span class="a-icon-alt">4.5 out of 5 stars</span>
+					</i>
+
+					<i class="a-icon a-icon-popover"></i>
+				</a>
+	        </span>
+	    </span>
+	    
+	    <a class="a-size-small a-link-normal a-text-normal" href="https://www.amazon.in/Game-Thrones-Song-Ice-Fire/dp/0007428545#customerReviews">272</a>
+    </div>
